@@ -1,0 +1,323 @@
+/* ============================================
+   🌙 NIGHTOWL DAPP - DARK MODE EDITION
+   ============================================ */
+
+/* Body - Keep the beautiful gradient! */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+  color: #e0e0e0;
+}
+
+/* Main Container - DARK MODE! */
+.main-container {
+  background: #292d3e; /* Pale Night dark background */
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+/* Wallet Status - Dark with subtle border */
+.wallet-status {
+  background: #1e1e2e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid #3e4451;
+  color: #c3e88d; /* Soft green for status */
+}
+
+/* Feature Boxes - Dark with depth */
+.feature-box {
+  background: #1e1e2e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #3e4451;
+}
+
+.feature-box h5 {
+  color: #82aaff; /* Soft blue for headings */
+  margin-bottom: 1rem;
+}
+
+/* Navigation Tabs - Keep gradient for active */
+.nav-tabs {
+  border-bottom: 1px solid #3e4451;
+}
+
+.nav-tabs .nav-link {
+  color: #b0b0b0;
+  background: #1e1e2e;
+  border: 1px solid #3e4451;
+  margin-right: 0.25rem;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #e0e0e0;
+  background: #2a2e3e;
+}
+
+.nav-tabs .nav-link.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  border-color: #667eea;
+}
+
+/* Description Boxes */
+.description {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.description-small {
+  font-size: 0.9em;
+  color: #b0b0b0;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Info Boxes - Dark with accent border */
+.info-box {
+  background: #1e1e2e;
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.info-box p {
+  margin: 5px 0;
+  color: #e0e0e0;
+}
+
+/* Status Box - Dark with info accent */
+.status-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #1e1e2e;
+  border-radius: 8px;
+  min-height: 50px;
+  border: 1px solid #3e4451;
+  color: #89ddff; /* Cyan for status messages */
+}
+
+/* Enhanced status display (from previous suggestion) */
+#factoryStatus {
+  font-family: "Courier New", monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 60px;
+  background: rgba(0, 255, 255, 0.05);
+  color: #89ddff;
+}
+
+/* Contract info highlight - Dark borders */
+.bg-dark.border-warning {
+  border: 2px solid #ffc107 !important;
+  background: #1e1e2e !important;
+}
+
+.bg-dark.border-info {
+  border: 2px solid #0dcaf0 !important;
+  background: #1e1e2e !important;
+}
+
+/* Form Controls - Dark inputs */
+.form-control {
+  background: #1e1e2e;
+  border: 1px solid #3e4451;
+  color: #e0e0e0;
+}
+
+.form-control:focus {
+  background: #252837;
+  border-color: #667eea;
+  color: #e0e0e0;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-control::placeholder {
+  color: #5c6370;
+}
+
+/* Input Groups */
+.input-group-text {
+  background: #1e1e2e;
+  border: 1px solid #3e4451;
+  color: #e0e0e0;
+}
+
+/* Buttons - Enhanced with dark theme */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-warning {
+  background: #ffcb6b;
+  border: none;
+  color: #1e1e2e;
+  font-weight: 600;
+}
+
+.btn-warning:hover {
+  background: #ffd78a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 203, 107, 0.4);
+  color: #1e1e2e;
+}
+
+.btn-info {
+  background: #89ddff;
+  border: none;
+  color: #1e1e2e;
+  font-weight: 600;
+}
+
+.btn-info:hover {
+  background: #a3e5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(137, 221, 255, 0.4);
+  color: #1e1e2e;
+}
+
+.btn-success {
+  background: #c3e88d;
+  border: none;
+  color: #1e1e2e;
+  font-weight: 600;
+}
+
+.btn-success:hover {
+  background: #d4f0a3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(195, 232, 141, 0.4);
+  color: #1e1e2e;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  color: white;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+}
+
+/* Text Colors - Semantic meaning */
+.text-warning {
+  color: #ffcb6b !important;
+}
+
+.text-info {
+  color: #89ddff !important;
+}
+
+.text-success {
+  color: #c3e88d !important;
+}
+
+.text-danger {
+  color: #f07178 !important;
+}
+
+.text-muted {
+  color: #97a1b5 !important;
+}
+
+/* Small text notes */
+small.text-muted {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #e0e0e0;
+}
+
+h3 {
+  color: #c792ea; /* Soft purple for main headings */
+}
+
+/* Links */
+a {
+  color: #82aaff;
+}
+
+a:hover {
+  color: #a3c5ff;
+}
+
+/* Tables (if you add them later) */
+.table {
+  color: #e0e0e0;
+  background: #1e1e2e;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Scrollbar styling (optional but nice!) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e4451;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e5461;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0;
+  }
+
+  .main-container {
+    padding: 1rem;
+  }
+
+  .feature-box {
+    padding: 1rem;
+  }
+}

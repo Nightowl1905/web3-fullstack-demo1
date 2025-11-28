@@ -1,0 +1,19 @@
+{
+  "name": "ethers_1",
+  "version": "1.0.0",
+  "description": "Frontend interaction layer for Smart contract",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethers",
+    "web3",
+    "blockchain"
+  ],
+  "author": "Nightowl",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.15.0"
+  }
+}

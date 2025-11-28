@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightowl's DApp Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-container">
+            <!-- Header -->
+            <div class="text-center mb-4">
+                <h1>🦉 Nightowl's DApp Portfolio</h1>
+                <p class="text-muted">Demonstrating Web3 Development Skills</p>
+            </div>
+
+            <!-- Wallet Connection (Shared) -->
+            <div class="wallet-status">
+                <button id="connectWallet" class="btn btn-primary btn-lg">
+                    Connect MetaMask
+                </button>
+                <p id="walletAddress" class="mt-2 mb-0">Not connected</p>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <ul class="nav nav-tabs mb-4" id="dappTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="storage-tab" data-bs-toggle="tab" data-bs-target="#storage"
+                        type="button" role="tab">
+                        📦 Factory Storage
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="token-tab" data-bs-toggle="tab" data-bs-target="#token" type="button"
+                        role="tab">
+                        🪙 Nightowl Token (ERC20)
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="dappTabsContent">
+
+                <!-- ============================================ -->
+                <!-- TAB 1: Factory Storage Multi-Contract -->
+                <!-- ============================================ -->
+                <div class="tab-pane fade show active" id="storage" role="tabpanel">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-3">🏭 SimpleStorage Multi-Contract Factory Demo</h3>
+
+                            <!-- Factory Information Display -->
+                            <div class="feature-box bg-dark border-warning">
+                                <h5>📊 Factory Information</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="mb-1"><strong>Total Contracts:</strong>
+                                            <span id="contractCount" class="text-warning">0</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="mb-1"><strong>Current Contract:</strong>
+                                            <span id="currentContractAddress" class="text-warning">-</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Create New Contract -->
+                            <div class="feature-box">
+                                <h5>🏭 Create New TimesTwoStorage Contract</h5>
+                                <button id="createContractBtn" class="btn btn-success">
+                                    ✨ Create New Contract
+                                </button>
+                            </div>
+
+                            <!-- CONTRACT SELECTOR - NEW! -->
+                            <div class="feature-box bg-dark border-primary">
+                                <h5>🎯 Select Contract to Interact With</h5>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-dark text-light border-primary">Contract
+                                        Index:</span>
+                                    <input type="number" id="contractIndex" class="form-control" placeholder="0"
+                                        value="0" min="0">
+                                    <button id="loadContractBtn" class="btn btn-primary">
+                                        📍 Load Contract
+                                    </button>
+                                </div>
+                                <small class="text-muted">Enter index (0, 1, 2...) to select which contract to interact
+                                    with</small>
+                            </div>
+
+                            <!-- Store Number (×2!) - NOW WITH INDEX -->
+                            <div class="feature-box">
+                                <h5>💾 Store Number (will be ×2!)</h5>
+                                <div class="row mb-2">
+                                    <div class="col-md-4">
+                                        <label class="form-label text-muted">Contract Index:</label>
+                                        <input type="number" id="storeContractIndex" class="form-control"
+                                            placeholder="0" value="0" min="0">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label text-muted">Number to Store:</label>
+                                        <input type="number" id="storeInput" class="form-control"
+                                            placeholder="Enter number (e.g., 33 becomes 66)">
+                                    </div>
+                                </div>
+                                <button id="storeNumberBtn" class="btn btn-warning w-100">
+                                    💾 Store to Contract
+                                </button>
+                                <small class="text-muted">Note: Stored value will be doubled automatically!</small>
+                            </div>
+
+                            <!-- Add Person (Original Number) - NOW WITH INDEX -->
+                            <div class="feature-box">
+                                <h5>👤 Add Person (original number, NOT ×2)</h5>
+                                <div class="row mb-2">
+                                    <div class="col-md-4">
+                                        <label class="form-label text-muted">Contract Index:</label>
+                                        <input type="number" id="addPersonContractIndex" class="form-control"
+                                            placeholder="0" value="0" min="0">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label text-muted">Name:</label>
+                                        <input type="text" id="personName" class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label text-muted">Favorite Number:</label>
+                                        <input type="number" id="personNumber" class="form-control"
+                                            placeholder="Number">
+                                    </div>
+                                </div>
+                                <button id="addPersonBtn" class="btn btn-warning w-100">
+                                    👤 Add Person to Contract
+                                </button>
+                                <small class="text-muted">Note: Person's number is stored as-is (NOT doubled)</small>
+                            </div>
+
+                            <!-- Retrieve Favorite Number - NOW WITH INDEX -->
+                            <div class="feature-box">
+                                <h5>🔍 Retrieve My Favorite Number</h5>
+                                <div class="row mb-2">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted">Contract Index:</label>
+                                        <input type="number" id="retrieveContractIndex" class="form-control"
+                                            placeholder="0" value="0" min="0">
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-end">
+                                        <button id="retrieveNumberBtn" class="btn btn-info w-100">
+                                            🔍 Retrieve
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bg-dark p-3 rounded border border-info">
+                                    <p class="mb-0"><strong>My Favorite Number:</strong>
+                                        <span id="retrievedValue" class="text-warning">-</span>
+                                    </p>
+                                    <small class="text-muted">(Already ×2!)</small>
+                                </div>
+                            </div>
+
+                            <!-- Retrieve Person's Number - NOW WITH INDEX -->
+                            <div class="feature-box">
+                                <h5>🔎 Retrieve Person's Number</h5>
+                                <div class="row mb-2">
+                                    <div class="col-md-4">
+                                        <label class="form-label text-muted">Contract Index:</label>
+                                        <input type="number" id="getPersonContractIndex" class="form-control"
+                                            placeholder="0" value="0" min="0">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label text-muted">Person's Name:</label>
+                                        <input type="text" id="retrieveName" class="form-control"
+                                            placeholder="Enter name">
+                                    </div>
+                                </div>
+                                <button id="retrievePersonBtn" class="btn btn-info w-100">
+                                    🔎 Retrieve by Name
+                                </button>
+                                <div class="bg-dark p-3 rounded border border-info mt-2">
+                                    <p class="mb-0"><strong>Person's Number:</strong>
+                                        <span id="retrievedPersonNumber" class="text-warning">-</span>
+                                    </p>
+                                    <small class="text-muted">(Original value, NOT doubled)</small>
+                                </div>
+                            </div>
+
+                            <!-- Status Display -->
+                            <div class="feature-box bg-dark border-info">
+                                <h5>📡 Status</h5>
+                                <div id="factoryStatus" class="text-info">
+                                    🌙 Ready. Connect wallet and create/select a contract to begin.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- TAB 2: ERC20 Token (Nightowl Token) -->
+                <!-- ============================================ -->
+                <div class="tab-pane fade" id="token" role="tabpanel">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="mb-3">🦉 Nightowl Token (NOWL)</h3>
+
+                            <!-- Token Info Display -->
+                            <div class="feature-box">
+                                <h5>Token Information</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong>Contract Address:</strong></p>
+                                        <p class="text-muted small" id="tokenAddress">
+                                            Not connected
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><strong>Total Supply:</strong></p>
+                                        <p id="totalSupply" class="fs-4 text-primary">-</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Balance Display -->
+                            <div class="feature-box">
+                                <h5>Your Balance</h5>
+                                <button id="checkBalanceBtn" class="btn btn-info mb-2">
+                                    Check Balance
+                                </button>
+                                <div class="alert alert-success" role="alert">
+                                    <h4 class="alert-heading">Your NOWL Balance:</h4>
+                                    <p id="userBalance" class="fs-3 mb-0">-</p>
+                                </div>
+                            </div>
+
+                            <!-- Transfer (Optional - can add later) -->
+                            <div class="feature-box">
+                                <h5>Transfer Tokens</h5>
+                                <input type="text" id="transferTo" class="form-control mb-2"
+                                    placeholder="Recipient Address">
+                                <input type="number" id="transferAmount" class="form-control mb-2" placeholder="Amount">
+                                <button id="transferBtn" class="btn btn-warning">
+                                    Transfer NOWL
+                                </button>
+                                <p id="transferStatus" class="mt-2 mb-0 text-muted"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+
+
+    <script type="module" src="js/core/config.js"></script>
+    <script type="module" src="js/core/wallet.js"></script>
+    <script type="module" src="js/core/contract.js"></script>
+    <script type="module" src="js/storageFactory.js"></script>
+    <script type="module" src="js/erc20.js"></script>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv"
 import { HardhatUserConfig } from "hardhat/config"
-import "@nomicfoundation/hardhat-toolbox" // Fixed typo: Foundation not Foundation
+import "@nomicfoundation/hardhat-toolbox"
 import "@matterlabs/hardhat-zksync-solc"
 import "@matterlabs/hardhat-zksync-deploy"
 import "@matterlabs/hardhat-zksync-verify"
@@ -11,8 +11,8 @@ const config: HardhatUserConfig = {
   zksolc: {
     version: "1.5.14",
     settings: {
-      enableEraVMExtensions: false, // Fixed: replaced isSystem
-      forceEVMLA: false, // Fixed: replaced forceEvmia and corrected spelling
+      enableEraVMExtensions: false,
+      forceEVMLA: false,
       optimizer: {
         enabled: true,
         runs: 200,
@@ -47,8 +47,8 @@ const config: HardhatUserConfig = {
     },
   },
   solidity: {
-    version: "0.8.28", // Fixed: object, not array
+    version: "0.8.28",
   },
 }
 
-export default config // Added missing export
+export default config

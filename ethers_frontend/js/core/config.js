@@ -22,7 +22,7 @@ export const NETWORKS = {
     rpc: "https://sepolia.era.zksync.dev",
     contracts: {
       storage: {
-        address: "0xF381418343C75Df2366dd7B96aa4Df40727068cb",
+        address: "0x0B1e1543ed450c7b302eb1842af1c878Af2Ae30d",
         abiPath: "./abi/zk_timesTwoStorageFactory.json",
       },
       token: {

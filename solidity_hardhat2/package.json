@@ -11,7 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "@matterlabs/hardhat-zksync-deploy": "^1.8.0",
-    "@matterlabs/hardhat-zksync-solc": "^1.5.1",
     "@matterlabs/hardhat-zksync-verify": "^1.9.1",
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "hardhat": "^2.27.0"

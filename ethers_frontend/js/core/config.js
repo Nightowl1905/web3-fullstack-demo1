@@ -26,7 +26,7 @@ export const NETWORKS = {
         abiPath: "./abi/zk_timesTwoStorageFactory.json",
       },
       token: {
-        address: "0x57aDB5f1C28eeE9A7cF6B052385c90c7bB707761",
+        address: "0x2A264d57aAf44362A110bE41F1949C8C42BaE2f5",
         abiPath: "./abi/zk_myToken.json",
       },
     },

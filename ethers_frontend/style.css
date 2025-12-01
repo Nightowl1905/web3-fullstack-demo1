@@ -2,7 +2,6 @@
    🌙 NIGHTOWL DAPP - DARK MODE EDITION
    ============================================ */
 
-/* Body - Keep the beautiful gradient! */
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
@@ -10,9 +9,8 @@ body {
   color: #e0e0e0;
 }
 
-/* Main Container - DARK MODE! */
 .main-container {
-  background: #292d3e; /* Pale Night dark background */
+  background: #292d3e;
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   padding: 2rem;
@@ -21,7 +19,7 @@ body {
   color: #e0e0e0;
 }
 
-/* Wallet Status - Dark with subtle border */
+/* Wallet Status */
 .wallet-status {
   background: #1e1e2e;
   padding: 1rem;
@@ -29,10 +27,10 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   border: 1px solid #3e4451;
-  color: #c3e88d; /* Soft green for status */
+  color: #c3e88d;
 }
 
-/* Feature Boxes - Dark with depth */
+/* Feature Boxes */
 .feature-box {
   background: #1e1e2e;
   padding: 1.5rem;
@@ -42,11 +40,11 @@ body {
 }
 
 .feature-box h5 {
-  color: #82aaff; /* Soft blue for headings */
+  color: #82aaff;
   margin-bottom: 1rem;
 }
 
-/* Navigation Tabs - Keep gradient for active */
+/* Navigation Tabs */
 .nav-tabs {
   border-bottom: 1px solid #3e4451;
 }
@@ -86,7 +84,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Info Boxes - Dark with accent border */
+/* Info Boxes */
 .info-box {
   background: #1e1e2e;
   border-left: 4px solid #667eea;
@@ -100,7 +98,7 @@ body {
   color: #e0e0e0;
 }
 
-/* Status Box - Dark with info accent */
+/* Status Box */
 .status-box {
   margin-top: 20px;
   padding: 15px;
@@ -108,10 +106,10 @@ body {
   border-radius: 8px;
   min-height: 50px;
   border: 1px solid #3e4451;
-  color: #89ddff; /* Cyan for status messages */
+  color: #89ddff;
 }
 
-/* Enhanced status display (from previous suggestion) */
+/* Enhanced status display */
 #factoryStatus {
   font-family: "Courier New", monospace;
   padding: 1rem;
@@ -121,7 +119,7 @@ body {
   color: #89ddff;
 }
 
-/* Contract info highlight - Dark borders */
+/* Contract info highlight */
 .bg-dark.border-warning {
   border: 2px solid #ffc107 !important;
   background: #1e1e2e !important;
@@ -132,7 +130,7 @@ body {
   background: #1e1e2e !important;
 }
 
-/* Form Controls - Dark inputs */
+/* Form Controls */
 .form-control {
   background: #1e1e2e;
   border: 1px solid #3e4451;
@@ -157,7 +155,7 @@ body {
   color: #e0e0e0;
 }
 
-/* Buttons - Enhanced with dark theme */
+/* Buttons */
 .btn {
   transition: all 0.3s ease;
 }
@@ -267,7 +265,7 @@ h6 {
 }
 
 h3 {
-  color: #c792ea; /* Soft purple for main headings */
+  color: #c792ea;
 }
 
 /* Links */

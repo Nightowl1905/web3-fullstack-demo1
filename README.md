@@ -1,6 +1,6 @@
 # web3-fullstack-demo1
 
-Fullstack Web3 DApp: Smart contracts (Hardhat 2+ zkSync L2) + Frontend (Ethers.js)
+Personal Web3 learning project demonstrating smart contract development and frontend integration.
 
 # Web3 Full-Stack Demo
 
@@ -18,3 +18,14 @@ This is a demonstration of blockchain fundamentals:
 - **ethers.js**
 - **Hardhat 2**
 - **zkSync Era**
+- _OpenZepplin_
+
+## Note
+
+This is a learning portfolio project, not a production framework.
+Environment variables required for local execution.
+
+## Live Deployment
+
+Contracts viewable on zkSync Sepolia Explorer:
+https://sepolia.explorer.zksync.io/address/0x1A2115173c31Fa8E6a598a8a40671Df4c2C99680

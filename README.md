@@ -1,10 +1,7 @@
-# web3-fullstack-demo1
-
-Personal Web3 learning project demonstrating smart contract development and frontend integration.
-
 # Web3 Full-Stack Demo
 
 ## 🎯 Purpose
+Personal Web3 learning project demonstrating smart contract development and frontend integration.
 
 This is a demonstration of blockchain fundamentals:
 
